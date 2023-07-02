@@ -1,0 +1,104 @@
+html,
+body {
+  background-color: rgb(173, 13, 173);
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.s1 {
+  position: relative;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  color: white;
+  text-align: center;
+  transform-origin: center center;
+  z-index: -1;
+}
+
+.name {
+  font-size: 2.3rem;
+  display: inline-block;
+  width: 100vw;
+}
+
+.des {
+  display: inline-block;
+  font-size: 1.3rem;
+  width: 100vw;
+}
+
+.name-animation {
+  animation-name: none;
+  animation: name 2s;
+}
+
+.des-animation {
+  animation-name: none;
+  animation: des 2s;
+}
+
+#project-jump {
+  display: inline-block;
+  text-decoration: none;
+  border: white solid 1px;
+  color: white;
+  border-radius: 3px;
+  padding: 16px;
+  transition: transform 1s;
+  will-change: transform;
+  margin: 1vh;
+}
+
+#project-jump:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+}
+
+.s2 {
+  background-color: aquamarine;
+
+}
+
+.s3 {
+  background-color: bisque;
+}
+
+.s4 {
+  background-color: blueviolet;
+}
+
+@keyframes name {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes des {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes opaque {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

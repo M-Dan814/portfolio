@@ -14,19 +14,15 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-      </ul>
-    </nav>
-
     <div id="fullPage">
-      <div class="section">Intro</div>
-      <div class="section">About Me</div>
-      <div class="section">Projects</div>
-      <div class="section">Contact</div>
+      <div class="section s1">
+        <h1 class="name">Need help with a problem?</h1>
+        <p class="des">Well, you've come to the right place!</p>
+        <a id="project-jump" href="#s3">Take a sneak peek</a>
+      </div>
+      <div class="section s2"><h1 class="section-heading">About Me</h1></div>
+      <div class="section s3">Projects</div>
+      <div class="section s4">Contact</div>
     </div>
 
     <script
@@ -38,7 +34,31 @@
     <script>
       new fullpage("#fullPage", {
         autoScrolling: true,
+        scrollHorizontally: false,
+        anchors: ["s1", "s2", "s3", "s4"],
       });
+
+      const element1 = document.querySelector(".name");
+      const element2 = document.querySelector(".des");
+
+      // Create the Intersection Observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add the CSS class to restart the animation
+            element1.classList.add("name-animation");
+            element2.classList.add("des-animation");
+          } else {
+            // Remove the CSS class to pause the animation
+            element1.classList.remove("name-animation");
+            element2.classList.remove("des-animation");
+          }
+        });
+      });
+
+      observer.observe(element1);
+      observer.observe(element2);
     </script>
+    <script src="scripts.js"></script>
   </body>
 </html>
