@@ -1,6 +1,5 @@
 html,
 body {
-  background-color: rgb(173, 13, 173);
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -12,18 +11,14 @@ body {
   background-size: cover;
   color: white;
   text-align: center;
-  transform-origin: center center;
-  z-index: -1;
 }
 
 .name {
   font-size: 2.3rem;
-  display: inline-block;
   width: 100vw;
 }
 
 .des {
-  display: inline-block;
   font-size: 1.3rem;
   width: 100vw;
 }
@@ -57,15 +52,45 @@ body {
 }
 
 .s2 {
-  background-color: aquamarine;
+  position: relative;
+  background-color: rgb(5, 4, 24);
+}
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.portrait {
+  width: 100%;
+  height: 100vh;
+  grid-area: 1/1;
+  object-fit: contain;
+}
+
+.description {
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description > p {
+  color: white;
+}
+
+.section-heading {
+  color: #6343a0;
 }
 
 .s3 {
+  position: relative;
   background-color: bisque;
 }
 
 .s4 {
+  position: relative;
   background-color: blueviolet;
 }
 
@@ -89,16 +114,6 @@ body {
 
   to {
     transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes opaque {
-  from {
-    opacity: 0;
-  }
-
-  to {
     opacity: 1;
   }
 }
