@@ -7,19 +7,19 @@ body {
 
 .s1 {
   position: relative;
-  background-image: url("images/background.jpg");
+  background-image: url("images/background-1939128_1280.webp");
   background-size: cover;
   color: white;
   text-align: center;
 }
 
 .name {
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   width: 100vw;
 }
 
 .des {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   width: 100vw;
 }
 
@@ -53,7 +53,7 @@ body {
 
 .s2 {
   position: relative;
-  background-color: rgb(5, 4, 24);
+  background-color: rgb(15, 15, 15);
 }
 
 .grid-container {
@@ -85,35 +85,91 @@ body {
 }
 
 .s3 {
+  color: white;
   position: relative;
-  background-color: bisque;
+  background-color: rgb(5, 4, 24);
 }
 
-.s4 {
-  position: relative;
-  background-color: blueviolet;
+.flex-container {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
 }
+
+.card {
+  width: 40vw;
+  height: auto;
+  text-align: center;
+  border: 1px solid white;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.site-link {
+  text-decoration: none;
+  background-color: #4862d6;
+  color: white;
+  padding: 6px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: transform 1s;
+  will-change: transform;
+}
+
+.site-link:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #4862d6;
+  transform: scale(1.1);
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.code-link {
+  background-color: #d64848;
+  color: white;
+  margin-right: 2vw;
+}
+
+.code-link:hover{
+  color: #d64848;
+  background-color: white;
+}
+
+
 
 @keyframes name {
   from {
-    transform: translateX(-100%);
+    transform: scale(0);
     opacity: 0;
   }
 
   to {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
 
 @keyframes des {
   from {
-    transform: translateX(100%);
+    transform: scale(0);
     opacity: 0;
   }
 
   to {
-    transform: translateX(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
